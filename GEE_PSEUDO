@@ -1,0 +1,35 @@
+1. Load Nepal district boundaries.
+2. Filter to select the Kaski district.
+3. Display Kaski region and center the map on it.
+
+4. Load landslide catalog and clip to Kaski.
+5. Convert clipped landslides to an image layer.
+6. Calculate distance of each pixel to the nearest landslide point.
+
+7. Generate random points in Kaski.
+8. Filter these to only keep points >1 km away from landslides.
+   → Label them as non-landslide points (label = 0)
+
+9. Label clipped landslide points as landslides (label = 1).
+10. Merge landslide and non-landslide points.
+
+11. Load and clip SRTM elevation data to Kaski.
+12. Derive slope and aspect from elevation.
+13. Calculate mean annual precipitation (2000–2023) using CHIRPS.
+14. Stack elevation, slope, aspect, and precipitation into a multiband image.
+
+15. Sample raster values at labeled point locations.
+16. Split dataset into training and testing sets.
+
+17. Train Random Forest classifier on training set.
+18. Classify raster pixels using trained model to get probability values.
+
+19. Reclassify probability map into 5 risk zones:
+    - Very Low, Low, Medium, High, Very High
+
+20. Compute area of each risk zone in sq km.
+
+21. Perform ROC/AUC evaluation using sampled points.
+22. Plot ROC curve and print AUC score.
+
+23. Add a legend to the map for interpretability.
