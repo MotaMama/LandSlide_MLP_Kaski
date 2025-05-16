@@ -46,7 +46,8 @@ This project implements a deep learning-based approach for **Landslide Susceptib
   - High
   - Very High susceptibility
 
-![Final Map](GEE_Kaski/kaski_susceptibility_refined_highcontrast.png)
+![Kaski map](https://github.com/user-attachments/assets/83b150c8-afc9-4d78-82c9-0dc7c023f186)
+
 
 ## 🚀 Running the Project
 
